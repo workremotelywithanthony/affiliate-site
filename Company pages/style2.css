@@ -1,0 +1,27 @@
+.filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.filter input, .filter select, .filter button {
+  padding: 8px;
+  font-size: 14px;
+}
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.apply-btn, .open-form, #search-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.apply-btn:hover, .open-form:hover, #search-btn:hover {
+  background-color: #0056b3;
+}

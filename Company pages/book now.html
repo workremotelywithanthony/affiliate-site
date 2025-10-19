@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Sacasta Tech Language Services">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<meta name="description" content="Offering professional translation and interpretation in 300+ language. Accurate, fast, and confidential language solutions.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Moses Makasala">
+ <meta name="keywords" content="translation, interpretation, language services">
+<title>Professional Translation & Interpretation Services | Sacasta Tech Language services | Booking</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Sacasta Tech Logo">
+    <span>Sacasta<span class="highlight">Tech</span></span>
+  </a>
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+ 
+ 
+  <section class="demo-container">
+    <div class="demo-info">
+      <h2>Experience the Difference</h2>
+      <p>During your personalized sessions, our specialists will walk you through our services, tools, and workflow. You’ll discover how we ensure accuracy, consistency, and cultural relevance in every project.</p>
+      <ul>
+        <li>✔ live session</li>
+        <li>✔ Tailored to your industry and goals</li>
+        <li>✔ Q&A with our language experts</li>
+        <li>✔ No obligation — just insights</li>
+      </ul>
+    </div>
+
+    <form class="demo-form">
+      <h3>BOOK YOUR SESSION NOW</h3>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Business Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="company">Company / Organization</label>
+      <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+
+      <label for="service">Service of Interest</label>
+      <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option value="interpretation">Interpretation</option>
+        <option value="training">Medical Interpretation training</option>
+        <option value="training">Legal Interpretation training</option>
+        <option value="training">HIPAA training</option>
+      </select>
+
+      <label for="message">Additional Details (optional)</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your needs..."></textarea>
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col company">
+      <h3>SACASTA TECH LAGUAGE SERVICES</h3>
+      <p>We help businesses and individuals communicate with clarity and cultural accuracy through professional language solutions—translation, localization, and training you can trust.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Languages.html">Languages</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="Translation.html">Translation & Localization</a></li>
+        <li><a href="editing.html">Editing & Proofreading</a></li>
+        <li><a href="Interpretation.html">Interpretation</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <p>📍 Ntida, Matryer's lane<br>Kampala, Ug</p>
+      <p>📞 (+256) 076-353-103</p>
+      <p>📧 info@sacastatechlanguageservices.com</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/anthony-wesonga-526516385/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+         <a href="https://www.youtube.com/@VibesandVisionsHub" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Sacasta Tech Language Services. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </div>
+</footer>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("fWaxEhSpdQjljJDvB");
+  })();
+
+  document.querySelector(".demo-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_i3qheqf", "template_d6hmxzv", this)
+      .then(() => {
+        alert("✅ Your booking has been sent successfully!");
+        this.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("❌ Failed to send. Please check console for details.");
+      });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    color: #444;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container99{
+    display: flex;
+    width: 67%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.left{
+    width: 25%;
+    font-weight: bold;
+}
+
+.left p{
+    padding: 30px 20px;
+}
+
+.methods{
+    padding: 10px 0;
+}
+
+.methods div{
+    padding: 7px 20px;
+}

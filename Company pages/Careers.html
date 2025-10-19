@@ -1,0 +1,361 @@
+  <!DOCTYPE html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Sacasta Tech Language Services">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<meta name="description" content="Offering professional translation and interpretation in 300+ language. Accurate, fast, and confidential language solutions.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Moses Makasala">
+ <meta name="keywords" content="Careers, translation, interpretation, language services">
+<title>Professional Translation & Interpretation Services | Careers page</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Sacasta Tech Logo">
+    <span>Sacasta<span class="highlight">Tech</span></span>
+  </a>
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+
+
+<section class="careers">
+  <h2>Current Openings</h2>
+
+  <!-- Search & Filter -->
+  <div class="filter">
+    <input type="text" id="search" placeholder="Search job titles...">
+    <button id="search-btn">Search</button>
+    <select id="location-filter">
+      <option value="">All Locations</option>
+      <option value="Remote">Remote</option>
+      <option value="USA">USA</option>
+      <option value="Germany">Germany</option>
+    </select>
+  </div>
+
+  <!-- Job Listings -->
+  <div id="job-list">
+    <div class="job-card" data-location="Remote">
+      <h3>Video Remote Interpreter (VRI)</h3>
+      <p><b>Location:</b> Remote</p>
+      <button class="apply-btn">View Details</button>
+      <div class="job-details" style="display:none;">
+        <p>Provide professional interpretation for clients across medical, legal, and business fields via remote platforms.</p>
+        <p><b>Requirements:</b> Fluency in English and at least one other language. Prior interpretation experience preferred.</p>
+        <button class="open-form" data-position="Video Remote Interpreter (VRI)">Apply Now</button>
+      </div>
+    </div>
+
+    <div class="job-card" data-location="Germany">
+      <h3>Translator</h3>
+      <p><b>Location:</b> Germany</p>
+      <button class="apply-btn">View Details</button>
+      <div class="job-details" style="display:none;">
+        <p>Translate documents and content ensuring linguistic accuracy and cultural context.</p>
+        <p><b>Requirements:</b> Fluency in English and target language(s). Excellent writing skills required.</p>
+        <button class="open-form" data-position="Translator">Apply Now</button>
+      </div>
+    </div>
+  </div>
+
+  <p id="no-results" style="display:none; color:red; font-weight:bold; text-align:center;">No results found.</p>
+
+  <!-- Application Form -->
+  <div class="application-form" id="applicationForm" style="display:none;">
+    <h3>Apply for Position</h3>
+    <form id="careerForm">
+      <!-- Personal Info -->
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="middleName">Middle Name</label>
+      <input type="text" id="middleName" name="middleName">
+
+      <label for="lastName">Last Name *</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="dob">Date of Birth *</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="position">Position *</label>
+      <input type="text" id="position" name="position" readonly>
+
+      <label for="experience">Experience *</label>
+      <div id="experience-section">
+        <div class="experience-entry">
+          <label>Title *</label>
+          <input type="text" name="title[]" required>
+
+          <label>Employment Type *</label>
+          <select name="employmentType[]" required>
+            <option value="">Please Select</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Contract">Contract</option>
+            <option value="Internship">Internship</option>
+          </select>
+
+          <label>Company / Organization *</label>
+          <input type="text" name="company[]" required>
+
+          <label><input type="checkbox" name="currentRole[]"> I am currently working in this role</label>
+
+          <label>Start Date *</label>
+          <div class="date-row">
+            <select name="startMonth[]" required>
+              <option value="">Month</option>
+              <option>January</option><option>February</option><option>March</option><option>April</option>
+              <option>May</option><option>June</option><option>July</option><option>August</option>
+              <option>September</option><option>October</option><option>November</option><option>December</option>
+            </select>
+            <select name="startYear[]" required>
+              <option value="">Year</option>
+              <script>
+                const currentYear = new Date().getFullYear();
+                for(let y=currentYear; y>=1980; y--){
+                  document.write(`<option>${y}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+
+          <label>End Date *</label>
+          <div class="date-row">
+            <select name="endMonth[]">
+              <option value="">Month</option>
+              <option>January</option><option>February</option><option>March</option><option>April</option>
+              <option>May</option><option>June</option><option>July</option><option>August</option>
+              <option>September</option><option>October</option><option>November</option><option>December</option>
+            </select>
+            <select name="endYear[]">
+              <option value="">Year</option>
+              <script>
+                for(let y=currentYear; y>=1980; y--){
+                  document.write(`<option>${y}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="add-experience">+ Add Experience</button>
+
+      <label for="education">Education Level *</label>
+      <select id="education" name="education" required>
+        <option value="">Select</option>
+        <option value="High School">High School</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor’s Degree">Bachelor’s Degree</option>
+        <option value="Master’s Degree">Master’s Degree</option>
+        <option value="PhD">PhD</option>
+      </select>
+
+      <label for="cv">Upload CV *</label>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+      <label for="hipaa">Upload HIPAA Certificate</label>
+      <input type="file" id="hipaa" name="hipaa" accept=".pdf,.doc,.docx">
+
+      <label for="medical40hr">Upload 40hr Medical Interpretation Certificate</label>
+      <input type="file" id="medical40hr" name="medical40hr" accept=".pdf,.doc,.docx">
+
+      <label for="efset">Upload EF SET C1/C2 Certificate</label>
+      <input type="file" id="efset" name="efset" accept=".pdf,.doc,.docx">
+
+      <label>Native Language(s) *</label>
+      <div id="language-section">
+        <input type="text" name="language[]" placeholder="Enter native language" required>
+      </div>
+      <button type="button" id="add-language">+ Add Language</button>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+
+    <p id="career-status"></p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col company">
+      <h3>SACASTA TECH LAGUAGE SERVICES</h3>
+      <p>We help businesses and individuals communicate with clarity and cultural accuracy through professional language solutions—translation, localization, and training you can trust.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Languages.html">Languages</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="Translation.html">Translation & Localization</a></li>
+        <li><a href="editing.html">Editing & Proofreading</a></li>
+        <li><a href="Interpretation.html">Interpretation</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <p>📍 Ntida, Matryer's lane<br>Kampala, Ug</p>
+      <p>📞 (+256) 076-353-103</p>
+      <p>📧 info@sacastatechlanguageservices.com</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/anthony-wesonga-526516385/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+         <a href="https://www.youtube.com/@VibesandVisionsHub" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Sacasta Tech Language Services. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </div>
+</footer>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+emailjs.init("fWaxEhSpdQjljJDvB"); // Replace with your EmailJS Public Key
+
+// Toggle job details
+document.querySelectorAll(".apply-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const details = btn.nextElementSibling;
+    details.style.display = details.style.display === "block" ? "none" : "block";
+  });
+});
+
+// Open form with position filled
+document.querySelectorAll(".open-form").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("applicationForm").style.display = "block";
+    document.getElementById("position").value = btn.getAttribute("data-position");
+    window.scrollTo({ top: document.getElementById("applicationForm").offsetTop, behavior: 'smooth' });
+  });
+});
+
+// Search + "No results found"
+document.getElementById("search-btn").addEventListener("click", function() {
+  const query = document.getElementById("search").value.toLowerCase();
+  let found = false;
+  document.querySelectorAll(".job-card").forEach(card => {
+    const title = card.querySelector("h3").textContent.toLowerCase();
+    if (title.includes(query)) {
+      card.style.display = "block";
+      found = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+  document.getElementById("no-results").style.display = found ? "none" : "block";
+});
+
+// Filter by location
+document.getElementById("location-filter").addEventListener("change", function() {
+  const location = this.value;
+  let found = false;
+  document.querySelectorAll(".job-card").forEach(card => {
+    if (!location || card.dataset.location === location) {
+      card.style.display = "block";
+      found = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+  document.getElementById("no-results").style.display = found ? "none" : "block";
+});
+
+// Add new experience block
+document.getElementById("add-experience").addEventListener("click", () => {
+  const newExp = document.querySelector(".experience-entry").cloneNode(true);
+  newExp.querySelectorAll("input, select").forEach(input => input.value = "");
+  document.getElementById("experience-section").appendChild(newExp);
+});
+
+// Add new language
+document.getElementById("add-language").addEventListener("click", () => {
+  const newLang = document.createElement("input");
+  newLang.type = "text";
+  newLang.name = "language[]";
+  newLang.placeholder = "Enter native language";
+  document.getElementById("language-section").appendChild(newLang);
+});
+
+// Submit form via EmailJS
+document.getElementById("careerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = this;
+  const status = document.getElementById("career-status");
+  status.textContent = "Sending your application...";
+  status.style.color = "blue";
+
+  const templateParams = {
+    firstName: form.firstName.value,
+    middleName: form.middleName.value,
+    lastName: form.lastName.value,
+    dob: form.dob.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    position: form.position.value,
+    education: form.education.value
+  };
+
+  emailjs.send("service_i3qheqf", "template_i5845qw", templateParams)
+    .then(() => {
+      status.textContent = "✅ Application sent successfully!";
+      status.style.color = "green";
+      form.reset();
+    })
+    .catch(() => {
+      status.textContent = "❌ Failed to send. Try again.";
+      status.style.color = "red";
+    });
+});
+</script>
+
+</body>
+</html>
